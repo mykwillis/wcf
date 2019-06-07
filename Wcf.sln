@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.438
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedLib", "GettingStartedLib\GettingStartedLib.csproj", "{AC413CE0-0DCC-48EA-A046-AB896E91469B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcflib", "WcfLib\wcflib.csproj", "{AC413CE0-0DCC-48EA-A046-AB896E91469B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedHost", "GettingStartedHost\GettingStartedHost.csproj", "{7B715066-E34A-4215-A555-E2B0AABE59BB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcfhost", "WcfHost\wcfhost.csproj", "{7B715066-E34A-4215-A555-E2B0AABE59BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GettingStartedClient", "GettingStartedClient\GettingStartedClient.csproj", "{EA075F9F-BF6C-4059-B3FA-8527124516F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wcfclient", "WcfClient\wcfclient.csproj", "{EA075F9F-BF6C-4059-B3FA-8527124516F3}"
 	ProjectSection(ProjectDependencies) = postProject
 		{AC413CE0-0DCC-48EA-A046-AB896E91469B} = {AC413CE0-0DCC-48EA-A046-AB896E91469B}
 	EndProjectSection

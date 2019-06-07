@@ -1,30 +1,23 @@
 ﻿using System;
 using System.ServiceModel;
 using System.ServiceModel.Description;
-using GettingStartedLib;
+using WcfLib;
 
-namespace GettingStartedHost
+namespace WcfHost
 {
     class Program
     {
         static void Main(string[] args)
         {
-            // Step 1: Create a URI to serve as the base address.
-            //Uri baseAddress = new Uri("net.tcp://localhost:9999/GettingStarted/");
-
-            // Step 2: Create a ServiceHost instance.
-            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService)/*, baseAddress*/);
-
+            ServiceHost selfHost = new ServiceHost(typeof(EchoService));
             try
             {
                 selfHost.Open();
                 Console.WriteLine("The service is ready.");
-
                 foreach (var a in selfHost.BaseAddresses)
                 {
-                    Console.Write(a);
+                    Console.WriteLine(a);
                 }
-                // Close the ServiceHost to stop the service.
                 Console.WriteLine("Press <Enter> to terminate the service.");
                 Console.WriteLine();
                 Console.ReadLine();
