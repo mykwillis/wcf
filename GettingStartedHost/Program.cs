@@ -10,22 +10,20 @@ namespace GettingStartedHost
         static void Main(string[] args)
         {
             // Step 1: Create a URI to serve as the base address.
-            Uri baseAddress = new Uri("net.tcp://localhost:9999/GettingStarted/");
+            //Uri baseAddress = new Uri("net.tcp://localhost:9999/GettingStarted/");
 
             // Step 2: Create a ServiceHost instance.
-            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService), baseAddress);
+            ServiceHost selfHost = new ServiceHost(typeof(CalculatorService)/*, baseAddress*/);
 
             try
             {
-                // Step 3: Add a service endpoint.
-                selfHost.AddServiceEndpoint(typeof(ICalculator), new NetTcpBinding(), "CalculatorService");
-
-                // Step 4: Enable metadata exchange.
-
-                // Step 5: Start the service.
                 selfHost.Open();
                 Console.WriteLine("The service is ready.");
 
+                foreach (var a in selfHost.BaseAddresses)
+                {
+                    Console.Write(a);
+                }
                 // Close the ServiceHost to stop the service.
                 Console.WriteLine("Press <Enter> to terminate the service.");
                 Console.WriteLine();
